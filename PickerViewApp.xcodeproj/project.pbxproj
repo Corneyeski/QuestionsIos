@@ -14,6 +14,8 @@
 		33203D011FBCCFEE009637F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33203CFF1FBCCFEE009637F0 /* LaunchScreen.storyboard */; };
 		33203D0C1FBCCFEE009637F0 /* PickerViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33203D0B1FBCCFEE009637F0 /* PickerViewAppTests.swift */; };
 		33203D171FBCCFEE009637F0 /* PickerViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33203D161FBCCFEE009637F0 /* PickerViewAppUITests.swift */; };
+		33203D251FBCD274009637F0 /* Pregunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33203D241FBCD274009637F0 /* Pregunta.swift */; };
+		338D4E271FBF589A0084635C /* Tema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D4E261FBF589A0084635C /* Tema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		33203D121FBCCFEE009637F0 /* PickerViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickerViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33203D161FBCCFEE009637F0 /* PickerViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewAppUITests.swift; sourceTree = "<group>"; };
 		33203D181FBCCFEE009637F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33203D241FBCD274009637F0 /* Pregunta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pregunta.swift; sourceTree = "<group>"; };
+		338D4E261FBF589A0084635C /* Tema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tema.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				33203CFD1FBCCFEE009637F0 /* Assets.xcassets */,
 				33203CFF1FBCCFEE009637F0 /* LaunchScreen.storyboard */,
 				33203D021FBCCFEE009637F0 /* Info.plist */,
+				33203D241FBCD274009637F0 /* Pregunta.swift */,
+				338D4E261FBF589A0084635C /* Tema.swift */,
 			);
 			path = PickerViewApp;
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338D4E271FBF589A0084635C /* Tema.swift in Sources */,
 				33203CF91FBCCFEE009637F0 /* ViewController.swift in Sources */,
+				33203D251FBCD274009637F0 /* Pregunta.swift in Sources */,
 				33203CF71FBCCFEE009637F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +515,7 @@
 				33203D1D1FBCCFEE009637F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33203D1E1FBCCFEE009637F0 /* Build configuration list for PBXNativeTarget "PickerViewAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				33203D201FBCCFEE009637F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33203D211FBCCFEE009637F0 /* Build configuration list for PBXNativeTarget "PickerViewAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				33203D231FBCCFEE009637F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
