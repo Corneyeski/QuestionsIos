@@ -24,4 +24,10 @@ class Tema {
         self.preguntas = preguntas
         self.complete = false
     }
+    
+    init(object:Tema) {
+        self.nombre = object.nombre
+        self.preguntas = object.preguntas
+        self.complete = object.complete
+    }
 }

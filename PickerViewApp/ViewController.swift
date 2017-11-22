@@ -20,8 +20,33 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var pregunta: UITextField!
     @IBOutlet weak var start: UIButton!
+    @IBOutlet weak var resa: UITextField!
+    @IBOutlet weak var resb: UITextField!
+    @IBOutlet weak var resc: UITextField!
+    @IBOutlet weak var resd: UITextField!
     
     @IBAction func startQuestion(_ sender: Any) {
+        
+        var tema = Tema(object: groups[who])
+        
+        switch groups[who].nombre {
+        case "juegos":
+            print("hry")
+            
+        case "series":
+            print("series")
+            
+        default:
+            print("nada")
+        }
+        
+        //hacer de forma dinamica el mostrar la pregunta
+        
+        if !tema.complete && tema.preguntas.count > 0 {
+            
+        } else {
+            
+        }
         
     }
     
@@ -61,7 +86,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         let s3 = Pregunta(pregunta: "En waliking dead, quien mata a Gleen?", respuesta: "Rick", respuesta2: "Nigan", respuesta3: "Mishon", respuesta4: "Un soldado de nigan", correcta: 2)
         
         series = [s1,s2,s3]
-        groups.append(Tema(nombre: "series",preguntas: series))
+        groups.append(Tema(nombre:"series",preguntas: series))
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -78,6 +103,6 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         who = row
-        //startQuestion(startQuestion((Any).self))
+        startQuestion(startQuestion((Any).self))
     }
 }
