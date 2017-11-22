@@ -44,6 +44,10 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         
         if !tema.complete && tema.preguntas.count > 0 {
             
+            var random = Int(arc4random_uniform(UInt32(tema.preguntas.count - 0 + 1)) +  0)
+            
+            
+            
         } else {
             
         }
