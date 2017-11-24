@@ -161,7 +161,10 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         }
         
         if check {
+            
+            //DANI POR ALGUN MOTIVO ABSURDO ESTA FUNCION FUNCIONA ARRIBA PERO AQUI NO
             cleanBackgroundcolor()
+            
             tema.complete = true
             
             resa.text = ""
