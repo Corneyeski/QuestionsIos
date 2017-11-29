@@ -115,14 +115,56 @@
                                     <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aw8-In-iRs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GM-et-Eg2">
+                                <rect key="frame" x="283" y="636" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Crear tema"/>
+                                <connections>
+                                    <action selector="createTema:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zmy-oP-RtR"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xbxcbxc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="quw-cp-YTB">
+                                <rect key="frame" x="16" y="57" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre del tema?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jq4-LL-v8s">
+                                <rect key="frame" x="16" y="19" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwd-m9-e1a">
+                                <rect key="frame" x="307" y="20" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="add"/>
+                                <connections>
+                                    <action selector="addInputText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idx-cD-vPS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-2P-FR3">
+                                <rect key="frame" x="311" y="56" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="finish"/>
+                                <connections>
+                                    <action selector="addTeamToArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeY-c6-4h8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="add" destination="iwd-m9-e1a" id="7K2-Kp-C9b"/>
+                        <outlet property="askcreate" destination="jq4-LL-v8s" id="tCn-ZA-4Uz"/>
                         <outlet property="btna" destination="lU3-5j-ebg" id="hfF-JK-a1W"/>
                         <outlet property="btnb" destination="t1o-vQ-Vz1" id="7aG-Ul-JIe"/>
                         <outlet property="btnc" destination="H8h-c7-01m" id="LLJ-7y-rVf"/>
                         <outlet property="btnd" destination="C0i-Fy-9gA" id="ayW-cS-qQI"/>
+                        <outlet property="cancel" destination="f9b-2P-FR3" id="B7i-CE-2ZX"/>
+                        <outlet property="inputcreate" destination="quw-cp-YTB" id="HTB-wG-MkE"/>
                         <outlet property="pickerView" destination="UlF-Kf-XnA" id="wkW-ud-dne"/>
                         <outlet property="pregunta" destination="Lo0-6L-Kdl" id="12w-GB-q62"/>
                         <outlet property="puntos" destination="kgm-Li-3LY" id="iaa-ZY-p99"/>

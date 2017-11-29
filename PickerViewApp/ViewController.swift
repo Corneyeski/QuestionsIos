@@ -26,7 +26,15 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     @IBOutlet weak var btnc: UIButton!
     @IBOutlet weak var btnd: UIButton!
     
+    //variables crear tema
+    @IBOutlet weak var askcreate: UITextField!
+    @IBOutlet weak var inputcreate: UITextField!
+    @IBOutlet weak var add: UIButton!
+    @IBOutlet weak var cancel: UIButton!
+    var timeInput = 0
+    var team = Tema()
     
+    //Reinicia el juego de cero borrando todo
     @IBAction func restartGame(_ sender: Any) {
         groups.removeAll();
         rellenar();
@@ -54,6 +62,105 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         resd.text = ""
         pregunta.text = ""
     }
+    
+    /**Crear tema */
+    @IBAction func createTema(_ sender: Any) {
+        askcreate.isHidden = false;
+        inputcreate.isHidden = false;
+        add.isHidden = false;
+        cancel.isHidden = false;
+    }
+    
+    @IBAction func addInputText(_ sender: Any) {
+        
+        //Por defecto por si no me da tie
+        let askq = Pregunta()
+        askq.correcta = 1
+        
+        switch timeInput {
+        case 0:
+            print("")
+            
+            if inputcreate.text != "" {
+                team.nombre = inputcreate.text!
+            }else {
+                team.nombre = "no white pls"
+            }
+            timeInput += 1
+            askcreate.text = "pregunta?"
+        case 1:
+            print("")
+            if inputcreate.text != "" {
+                askq.pregunta = inputcreate.text!
+            }else {
+                askq.pregunta = "white"
+            }
+            timeInput += 1
+            askcreate.text = "respuesta 1? la correcta"
+        case 2:
+            print("")
+            if inputcreate.text != "" {
+                askq.respuestas[0] = inputcreate.text!
+            }else {
+                askq.respuestas[0] = "white"
+            }
+            timeInput += 1
+            askcreate.text = "respuesta 2?"
+        case 3:
+            print("")
+            if inputcreate.text != "" {
+                askq.respuestas[1] = inputcreate.text!
+            }else {
+                askq.respuestas[1] = "white"
+            }
+            timeInput += 1
+            askcreate.text = "respuesta 3?"
+        case 4:
+            print("")
+            if inputcreate.text != "" {
+                askq.respuestas[2] = inputcreate.text!
+            }else {
+                askq.respuestas[2] = "white"
+            }
+            timeInput += 1
+            askcreate.text = "respuesta 4?"
+        case 5:
+            print("")
+            if inputcreate.text != "" {
+                askq.respuestas[3] = inputcreate.text!
+            }else {
+                askq.respuestas[3] = "white"
+            }
+            timeInput = 1
+            askcreate.text = "pregunta?"
+            
+            team.preguntas.append(askq)
+            
+        default:
+           print("ge")
+        }
+    }
+    
+    //agregar a los temas el tema
+    @IBAction func addTeamToArray(_ sender: Any) {
+        groups.append(team)
+        
+        askcreate.isHidden = true;
+        inputcreate.isHidden = true;
+        add.isHidden = true;
+        cancel.isHidden = true;
+        
+        timeInput = 0
+        askcreate.text = "nombre del tema?"
+    }
+    
+    /**
+     *
+     *
+     *
+     *
+     *
+     */
     
     //seleccionamos la pregunta y comproamos que no esten todas contestadas
     @IBAction func startQuestion(_ sender: Any) {
