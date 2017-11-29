@@ -157,7 +157,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     /**
      *
      *
-     *
+     * Parece que la parte de añadir preguntas no va, no se por que pero esta a puntito
      *
      *
      */
