@@ -26,6 +26,36 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     @IBOutlet weak var btnc: UIButton!
     @IBOutlet weak var btnd: UIButton!
     
+    
+    @IBAction func restartGame(_ sender: Any) {
+        groups.removeAll();
+        rellenar();
+        
+        who = 0
+        question = Pregunta()
+        tema = Tema()
+        points = 0
+        btnActive = false
+        
+        randomSelected = 0
+        
+        btna.isHidden = true;
+        btnb.isHidden = true;
+        btnc.isHidden = true;
+        btnd.isHidden = true;
+        resa.backgroundColor = UIColor.clear
+        resb.backgroundColor = UIColor.clear
+        resc.backgroundColor = UIColor.clear
+        resd.backgroundColor = UIColor.clear
+        
+        resa.text = ""
+        resb.text = ""
+        resc.text = ""
+        resd.text = ""
+        pregunta.text = ""
+    }
+    
+    //seleccionamos la pregunta y comproamos que no esten todas contestadas
     @IBAction func startQuestion(_ sender: Any) {
         
         cleanBackgroundcolor()
@@ -173,6 +203,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
             resd.text = ""
             
             pregunta.text = "TODAS LAS PREGUNTAS DE ESTE TEMA HAN SIDO RESPONDIDAS"
+            cleanBackgroundcolor()
             
         }
         groups[who] = tema
